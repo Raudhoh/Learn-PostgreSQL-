@@ -1,0 +1,58 @@
+
+#Task 1
+
+Syntax for customer table
+
+```
+CREATE TABLE public.customer (
+customer_id integer NOT NULL,
+country varchar(30) NOT NULL,
+CONSTRAINT customer_pk PRIMARY KEY (customer_id)
+);
+```
+
+Syntax for product table
+
+```
+CREATE TABLE public.product (
+stock_code varchar(20) NOT NULL,
+description text NULL,
+CONSTRAINT product_pk PRIMARY KEY (stock_code)
+);
+```
+
+```
+CREATE TABLE public."transaction" (
+trx_id integer NOT NULL,
+invoice_no varchar(10) NOT NULL,
+stock_code varchar(20) NOT NULL,
+quantity integer NOT NULL,
+invoice_date timestamp NOT NULL,
+unit_price numeric(10,2) NOT NULL,
+customer_id integer,
+CONSTRAINT transaction_pk PRIMARY KEY (trx_id)
+);
+```
+
+
+
+Make SQL syntax for these statements :
+
+1. How many customers from Italy?
+2. List all country in customer table which name start by 'S' letter
+3. How many transaction during June 2011, which quantity more than 10?
+4. List top 5 transaction with highest price
+5. Show top 6-10 customer with highest transaction quantity
+6. Where do customer in point 5 stay?
+7. Select transaction total of every month during 2011
+8. How many product items which type is pencil?
+9. Which one is the most expensive pencil?
+10.Select top 5 country with highest amount transaction
+11.How many transaction quantity for each transaction of France in 2010? 
+12. What is the result of quantity multiplied by unit_price from each transaction of country which name start with 'S'? 
+13. What are countries which transaction quantity at least 7000?
+14. What is the best selling product in term of quantity?
+15. When is the first transaction of country which name start with United?
+
+
+
