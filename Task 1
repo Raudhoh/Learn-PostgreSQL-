@@ -13,13 +13,13 @@ CONSTRAINT customer_pk PRIMARY KEY (customer_id)
 
 Syntax for product table
 
-```
+'''
 CREATE TABLE public.product (
 stock_code varchar(20) NOT NULL,
 description text NULL,
 CONSTRAINT product_pk PRIMARY KEY (stock_code)
 );
-```
+'''
 
 ```
 CREATE TABLE public."transaction" (
